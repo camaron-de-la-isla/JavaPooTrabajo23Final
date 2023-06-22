@@ -81,7 +81,8 @@ public List<Producto> readProductos() {
         Scanner scanner = new Scanner(file);
         while (scanner.hasNextLine()) { // Cambiado de scanner.hasNext()
             String[] datos = scanner.nextLine().split(", ");
-            String tipo = datos[datos.length - 1];
+            String tipo = datos[
+                    datos.length - 1];
             switch (tipo) {
                 case "Altavoz":
                     Altavoz altavoz = new Altavoz(gestorId.assignId(), datos[0], Double.parseDouble(datos[1]),
