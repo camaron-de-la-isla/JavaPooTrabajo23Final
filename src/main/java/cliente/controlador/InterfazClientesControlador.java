@@ -10,8 +10,8 @@ package cliente.controlador;
  */
 
 import cliente.vista.InterfazClientesVista;
-import common.producto.GestorProductos;
-import common.producto.Producto;
+import common.producto.modelo.GestorProductos;
+import common.producto.modelo.Producto;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;

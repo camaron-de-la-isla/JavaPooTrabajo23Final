@@ -4,8 +4,8 @@
  */
 package common;
 
-import common.producto.GestorProductos;
-import common.producto.Producto;
+import common.producto.modelo.GestorProductos;
+import common.producto.modelo.Producto;
 import java.util.List;
 
 /**

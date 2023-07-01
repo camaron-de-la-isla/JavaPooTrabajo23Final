@@ -1,6 +1,12 @@
 
-import common.producto.GestorProductos;
-import common.producto.Producto;
+import cliente.modelo.Cliente;
+import cliente.modelo.InterfazCliente;
+import common.authentificacion.modelo.PasarelaAuthentificacion;
+import common.producto.modelo.GestorProductos;
+import common.producto.modelo.Producto;
+import empleado.modelo.Empleado;
+import empleado.modelo.GestorEmpleados;
+import empleado.modelo.InterfazEmpleados;
 import java.util.List;
 
 /*
@@ -13,14 +19,23 @@ import java.util.List;
  * @author sergi
  */
 public class Main {
-    public static void main(String[] args){
-        GestorProductos gestorProductos = new GestorProductos();
-        gestorProductos.inicializarProductos();
-        List<Producto> productos = gestorProductos.readProductos();
-        System.out.println("Tamanio de productos="+productos.size());
-        for(int i = 0; i < productos.size(); i++){
-            System.out.println(productos.get(i).toString());
+    public static void main(String[] args) {
+        PasarelaAuthentificacion p = new PasarelaAuthentificacion();
+        Object usuarioObjeto = p.autentificar();
+
+        if(usuarioObjeto instanceof Cliente) {
+            Cliente cliente = (Cliente) usuarioObjeto;
+            InterfazCliente interfazCliente = new InterfazCliente();
+            interfazCliente.InterfazCli(cliente);
         }
+        else if(usuarioObjeto instanceof Empleado) {
+            Empleado empleado = (Empleado) usuarioObjeto;
+            InterfazEmpleados interfazEmpleados = new InterfazEmpleados();
+            interfazEmpleados.InterfazEmp(empleado);
+        }
+        else {
+            System.out.println("Error");
+        }
+
     }
-    
 }

@@ -4,12 +4,12 @@
  */
 package cliente.vista;
 
-import common.producto.Altavoz;
-import common.producto.Producto;
-import common.producto.GestorProductos;
-import common.producto.Ordenador;
-import common.producto.Smartphone;
-import common.producto.Televisor;
+import common.producto.modelo.Altavoz;
+import common.producto.modelo.Producto;
+import common.producto.modelo.GestorProductos;
+import common.producto.modelo.Ordenador;
+import common.producto.modelo.Smartphone;
+import common.producto.modelo.Televisor;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

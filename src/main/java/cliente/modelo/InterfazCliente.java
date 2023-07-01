@@ -13,8 +13,8 @@ package cliente.modelo;
 
 import cliente.modelo.Cliente;
 import java.util.Scanner;
-import common.pedido.GestorPedidos;
-import common.producto.GestorProductos;
+import common.pedido.modelo.GestorPedidos;
+import common.producto.modelo.GestorProductos;
 
 public class InterfazCliente {
     public static void InterfazCli(Cliente cliente){
