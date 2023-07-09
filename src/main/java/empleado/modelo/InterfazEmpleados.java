@@ -104,14 +104,10 @@ import common.pedido.modelo.Venta;
                                 System.out.println("\n\n\n");
                                 System.out.println("Usuario: ");
                                 String userEliminar = sc.nextLine();
-                                if (gestorClientes.existeUsuario(userEliminar) == false) {
-                                    System.out.println("El cliente no existe\n\n\n");
-                                } else if (gestorClientes.existeUsuario(userEliminar) == true) {
+
                                     Cliente clienteEliminar = gestorClientes.buscarCliente(userEliminar);
                                     gestorClientes.deleteCliente(clienteEliminar.getDni());
                                     System.out.println("Cliente.Cliente eliminado correctamente\n\n\n");
-
-                                }
                                 break;
 
                             case 3:
@@ -337,8 +333,9 @@ import common.pedido.modelo.Venta;
                         System.out.println("1. Añadir producto");
                         System.out.println("2. Eliminar producto");
                         System.out.println("3. Modificar producto");
-                        System.out.println("4. Mostrar productos");
-                        System.out.println("5. Volver");
+                        System.out.println("4. Buscar producto");
+                        System.out.println("5. Mostrar productos");
+                        System.out.println("6. Volver");
                         System.out.println("Elige una opción: ");
                         int opcion3 = sc.nextInt();
 
@@ -349,10 +346,10 @@ import common.pedido.modelo.Venta;
                                 System.out.println("===============");
                                 System.out.println("\n\n\n");
                                 System.out.println("Que tipo de producto quieres añadir? ");
-                                System.out.println("1. Productos.Altavoz");
-                                System.out.println("2. Productos.Ordenador");
-                                System.out.println("3. Productos.Smartphone");
-                                System.out.println("4. Productos.Televisor");
+                                System.out.println("1. Altavoz");
+                                System.out.println("2. Ordenador");
+                                System.out.println("3. Smartphone");
+                                System.out.println("4. Televisor");
                                 System.out.println("Elige una opción: ");
                                 int opcion31 = sc.nextInt();
                                 boolean bool5 = true;
@@ -378,7 +375,7 @@ import common.pedido.modelo.Venta;
                                             String colorAltavoz = sc.nextLine();
                                             Altavoz altavoz = new Altavoz(gestorId.assignId(), nombreAltavoz, precioAltavoz, stockAltavoz, potenciaAltavoz, marcaAltavoz, modeloAltavoz, colorAltavoz);
                                             gestorProductos.addProducto(altavoz);
-                                            System.out.println("Productos.Altavoz añadido correctamente\n\n\n");
+                                            System.out.println("Altavoz añadido correctamente\n\n\n");
                                             break;
                                         case 2:
                                             System.out.println("Añadir ordenador");
@@ -405,7 +402,7 @@ import common.pedido.modelo.Venta;
                                             String colorOrdenador = sc.nextLine();
                                             Ordenador ordenador = new Ordenador(gestorId.assignId(), nombreOrdenador, precioOrdenador, stockOrdenador, ramOrdenador, almacenamientoOrdenador, sistemasOperativosOrdenador, marcaOrdenador, modeloOrdenador, colorOrdenador);
                                             gestorProductos.addProducto(ordenador);
-                                            System.out.println("Productos.Ordenador añadido correctamente\n\n\n");
+                                            System.out.println("Ordenador añadido correctamente\n\n\n");
                                             break;
 
                                         case 3:
@@ -432,7 +429,7 @@ import common.pedido.modelo.Venta;
                                             String colorSmartphone = sc.nextLine();
                                             Smartphone smartphone = new Smartphone(gestorId.assignId(), nombreSmartphone, precioSmartphone, stockSmartphone, ramSmartphone, almacenamientoSmartphone, sistemaOperativoSmarthpone, marcaSmartphone, modeloSmartphone, colorSmartphone);
                                             gestorProductos.addProducto(smartphone);
-                                            System.out.println("Productos.Smartphone añadido correctamente\n\n\n");
+                                            System.out.println("Smartphone añadido correctamente\n\n\n");
                                             break;
 
                                         case 4:
@@ -455,7 +452,7 @@ import common.pedido.modelo.Venta;
                                             String colorTelevisor = sc.nextLine();
                                             Televisor televisor = new Televisor(gestorId.assignId(), nombreTelevisor, precioTelevisor, stockTelevisor, pulgadasTelevisor, marcaTelevisor, modeloTelevisor, colorTelevisor);
                                             gestorProductos.addProducto(televisor);
-                                            System.out.println("Productos.Televisor añadido correctamente\n\n\n");
+                                            System.out.println("Televisor añadido correctamente\n\n\n");
                                             break;
 
 
@@ -471,10 +468,10 @@ import common.pedido.modelo.Venta;
                                 System.out.println("=================");
                                 System.out.println("\n\n\n");
                                 System.out.println("Que tipo de producto quieres eliminar? ");
-                                System.out.println("1. Productos.Altavoz");
-                                System.out.println("2. Productos.Ordenador");
-                                System.out.println("3. Productos.Smartphone");
-                                System.out.println("4. Productos.Televisor");
+                                System.out.println("1. Altavoz");
+                                System.out.println("2. Ordenador");
+                                System.out.println("3. Smartphone");
+                                System.out.println("4. Televisor");
                                 System.out.println("Elige una opción: ");
                                 int opcion32 = sc.nextInt();
 
@@ -497,7 +494,7 @@ import common.pedido.modelo.Venta;
                                                 for (int i = 0; i < gestorProductos.readProductos().size(); i++) {
                                                     if (gestorProductos.readProductos().get(i).getId() == idAltavozEliminar) {
                                                         gestorProductos.readProductos().remove(i);
-                                                        System.out.println("Productos.Altavoz eliminado correctamente");
+                                                        System.out.println("Altavoz eliminado correctamente");
                                                         break;
                                                     } else {
                                                         System.out.println("No se ha encontrado el altavoz");
@@ -508,7 +505,7 @@ import common.pedido.modelo.Venta;
                                                 for (int i = 0; i < gestorProductos.readProductos().size(); i++) {
                                                     if (gestorProductos.readProductos().get(i).getNombre().equals(nombreAltavozEliminar)) {
                                                         gestorProductos.readProductos().remove(i);
-                                                        System.out.println("Productos.Altavoz eliminado correctamente");
+                                                        System.out.println("Altavoz eliminado correctamente");
                                                         break;
                                                     } else {
                                                         System.out.println("No se ha encontrado el altavoz");
@@ -519,7 +516,7 @@ import common.pedido.modelo.Venta;
                                                 for (int i = 0; i < gestorProductos.readProductos().size(); i++) {
                                                     if (gestorProductos.readProductos().get(i).getNombre().equals(nombreAltavozEliminar) && gestorProductos.readProductos().get(i).getId() == idAltavozEliminar) {
                                                         gestorProductos.readProductos().remove(i);
-                                                        System.out.println("Productos.Altavoz eliminado correctamente");
+                                                        System.out.println("Altavoz eliminado correctamente");
                                                         break;
                                                     } else {
                                                         System.out.println("No se ha encontrado el altavoz");
@@ -545,7 +542,7 @@ import common.pedido.modelo.Venta;
                                                 for (int i = 0; i < gestorProductos.readProductos().size(); i++) {
                                                     if (gestorProductos.readProductos().get(i).getId() == idEliminar) {
                                                         gestorProductos.readProductos().remove(i);
-                                                        System.out.println("Productos.Ordenador eliminado correctamente");
+                                                        System.out.println("Ordenador eliminado correctamente");
                                                         break;
                                                     } else {
                                                         System.out.println("No se ha encontrado el ordenador");
@@ -556,7 +553,7 @@ import common.pedido.modelo.Venta;
                                                 for (int i = 0; i < gestorProductos.readProductos().size(); i++) {
                                                     if (gestorProductos.readProductos().get(i).getNombre().equals(nombreEliminar)) {
                                                         gestorProductos.readProductos().remove(i);
-                                                        System.out.println("Productos.Ordenador eliminado correctamente");
+                                                        System.out.println("Ordenador eliminado correctamente");
                                                         break;
                                                     } else {
                                                         System.out.println("No se ha encontrado el ordenador");
@@ -567,7 +564,7 @@ import common.pedido.modelo.Venta;
                                                 for (int i = 0; i < gestorProductos.readProductos().size(); i++) {
                                                     if (gestorProductos.readProductos().get(i).getNombre().equals(nombreEliminar) && gestorProductos.readProductos().get(i).getId() == idEliminar) {
                                                         gestorProductos.readProductos().remove(i);
-                                                        System.out.println("Productos.Ordenador eliminado correctamente");
+                                                        System.out.println("Ordenador eliminado correctamente");
                                                         break;
                                                     } else {
                                                         System.out.println("No se ha encontrado el ordenador");
@@ -595,7 +592,7 @@ import common.pedido.modelo.Venta;
                                                 for (int i = 0; i < gestorProductos.readProductos().size(); i++) {
                                                     if (gestorProductos.readProductos().get(i).getId() == idEliminar2) {
                                                         gestorProductos.readProductos().remove(i);
-                                                        System.out.println("Productos.Smartphone eliminado correctamente");
+                                                        System.out.println("Smartphone eliminado correctamente");
                                                         break;
                                                     } else {
                                                         System.out.println("No se ha encontrado el smartphone");
@@ -606,7 +603,7 @@ import common.pedido.modelo.Venta;
                                                 for (int i = 0; i < gestorProductos.readProductos().size(); i++) {
                                                     if (gestorProductos.readProductos().get(i).getNombre().equals(nombreEliminar2)) {
                                                         gestorProductos.readProductos().remove(i);
-                                                        System.out.println("Productos.Smartphone eliminado correctamente");
+                                                        System.out.println("Smartphone eliminado correctamente");
                                                         break;
                                                     } else {
                                                         System.out.println("No se ha encontrado el smartphone");
@@ -617,7 +614,7 @@ import common.pedido.modelo.Venta;
                                                 for (int i = 0; i < gestorProductos.readProductos().size(); i++) {
                                                     if (gestorProductos.readProductos().get(i).getNombre().equals(nombreEliminar2) && gestorProductos.readProductos().get(i).getId() == idEliminar2) {
                                                         gestorProductos.readProductos().remove(i);
-                                                        System.out.println("Productos.Smartphone eliminado correctamente");
+                                                        System.out.println("Smartphone eliminado correctamente");
                                                         break;
                                                     } else {
                                                         System.out.println("No se ha encontrado el smartphone");
@@ -644,7 +641,7 @@ import common.pedido.modelo.Venta;
                                                 for (int i = 0; i < gestorProductos.readProductos().size(); i++) {
                                                     if (gestorProductos.readProductos().get(i).getId() == idEliminar3) {
                                                         gestorProductos.readProductos().remove(i);
-                                                        System.out.println("Productos.Televisor eliminado correctamente");
+                                                        System.out.println("Televisor eliminado correctamente");
                                                         break;
                                                     } else {
                                                         System.out.println("No se ha encontrado el televisor");
@@ -655,7 +652,7 @@ import common.pedido.modelo.Venta;
                                                 for (int i = 0; i < gestorProductos.readProductos().size(); i++) {
                                                     if (gestorProductos.readProductos().get(i).getNombre().equals(nombreEliminar3)) {
                                                         gestorProductos.readProductos().remove(i);
-                                                        System.out.println("Productos.Televisor eliminado correctamente");
+                                                        System.out.println("Televisor eliminado correctamente");
                                                         break;
                                                     } else {
                                                         System.out.println("No se ha encontrado el televisor");
@@ -666,7 +663,7 @@ import common.pedido.modelo.Venta;
                                                 for (int i = 0; i < gestorProductos.readProductos().size(); i++) {
                                                     if (gestorProductos.readProductos().get(i).getNombre().equals(nombreEliminar3) && gestorProductos.readProductos().get(i).getId() == idEliminar3) {
                                                         gestorProductos.readProductos().remove(i);
-                                                        System.out.println("Productos.Televisor eliminado correctamente");
+                                                        System.out.println("Televisor eliminado correctamente");
                                                         break;
                                                     } else {
                                                         System.out.println("No se ha encontrado el televisor");
@@ -732,7 +729,7 @@ import common.pedido.modelo.Venta;
                                             System.out.println("Introduce el nuevo ID: ");
                                             int nuevoId = sc.nextInt();
                                             gestorProductos.readProductos().get(i).setId(nuevoId);
-                                            System.out.println("Productos.Producto modificado correctamente");
+                                            System.out.println("Producto modificado correctamente");
                                             break;
                                         } else {
                                             System.out.println("No se ha encontrado el producto");
@@ -743,7 +740,7 @@ import common.pedido.modelo.Venta;
                                 break;
 
                             case 4:
-                                System.out.println("Mostrar productos");
+                                System.out.println("Buscar producto");
                                 System.out.println("===============");
                                 System.out.println("\n\n\n");
                                 System.out.println("Introduce uno o los dos datos. Si no sabes el nombre, dejalo en blanco y solo introduce el ID. Si no sabes el ID, introduce 0 y solo introduce el nombre ");
@@ -787,9 +784,13 @@ import common.pedido.modelo.Venta;
                                 }
                                 break;
                             case 5:
-                                System.out.println("Voler");
+                                System.out.println("Mostrar productos");
                                 System.out.println("===============");
                                 System.out.println("\n\n\n");
+                                List<Producto> productos = gestorProductos.readProductos();
+                                for(int i=0; i<productos.size(); i++){
+                                    System.out.println(productos.get(i).toString());
+                                }
                                 break;
 
                             default:
@@ -991,61 +992,10 @@ import common.pedido.modelo.Venta;
                     }
                     break;
                 case 6:
-                    Producto productoPedido = new Producto();
                     System.out.println("Hacer pedido");
                     System.out.println("===============");
-                    System.out.println("\n\n\n");
-                    boolean bool9 = true;
-                    while(bool9 == true) {
-                        System.out.println("Introduce uno o los dos datos. Si no sabes el nombre, dejalo en blanco y solo introduce el ID. Si no sabes el ID, introduce 0 y solo introduce el nombre ");
-                        System.out.println("Nombre: ");
-                        String nombreProducto = sc.nextLine();
-                        System.out.println("ID: ");
-                        int idProducto = sc.nextInt();
-                        if (nombreProducto.equals("") && idProducto == 0) {
-                            System.out.println("No has introducido ningún dato");
-                            break;
-                        } else if (nombreProducto.equals("") && idProducto != 0) {
-                            boolean boolProducto = gestorProductos.existeProducto(idProducto);
-                            if (boolProducto == true) {
-                                productoPedido = gestorProductos.buscarProducto(idProducto);
-                            } else {
-                                System.out.println("No existe el producto");
-                            }
-                        } else if (!nombreProducto.equals("") && idProducto == 0) {
-                            boolean boolProducto = gestorProductos.existeProducto(nombreProducto);
-                            if (boolProducto) {
-                                productoPedido = gestorProductos.buscarProducto(nombreProducto);
-                            } else {
-                                System.out.println("No existe el producto");
-                            }
-                        } else {
-                            boolean boolProducto = gestorProductos.existeProducto(nombreProducto, idProducto);
-                            if (boolProducto == true) {
-                                productoPedido = gestorProductos.buscarProducto(idProducto, nombreProducto);
-                            } else {
-                                System.out.println("No existe el producto");
-                            }
-                        }
-
-                        System.out.println("Introduce la cantidad: ");
-                        int cantidad = sc.nextInt();
-                        if (cantidad <= 0) {
-                            System.out.println("La cantidad debe ser mayor que 0");
-                        }
-                        /*
-                        gestorPedidos.hacerPedidoTienda(productoPedido, cantidad);
-                        */
-                        System.out.println("¿Quieres hacer otro pedido? (S/N)");
-                        String respuesta = sc.nextLine();
-                        if (respuesta.equals("S") || respuesta.equals("s")) {
-                            bool9 = true;
-                        } else {
-                            bool9 = false;
-                        }
-
-
-                    }
+                    
+                    
             }
             break;
         }

@@ -9,15 +9,20 @@ package common.authentificacion.controlador;
  * @author sergi
  */
 
+import empleado.controlador.InterfazEmpleadosControlador;
+import common.authentificacion.modelo.PasarelaAuthentificacion;
 import common.authentificacion.vista.PasAuthClienteVista;
 import common.authentificacion.vista.PasAuthEmpleadoVista;
 import common.authentificacion.vista.PasarelaAuthentificacionVista;
+import empleado.modelo.Empleado;
+import empleado.vista.InterfazEmpleadosVista;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class AuthControlador {
     private PasarelaAuthentificacionVista vista;
-
+    public PasarelaAuthentificacion pasAuth;
+    
     public AuthControlador(PasarelaAuthentificacionVista vista) {
         this.vista = vista;
         this.vista.getClienteButton().addActionListener(new ClienteButtonListener());
@@ -37,10 +42,39 @@ public class AuthControlador {
         @Override
         public void actionPerformed(ActionEvent e) {
             PasAuthEmpleadoVista empleadoVista = new PasAuthEmpleadoVista();
+            empleadoVista.getIniciarSesionBoton().addActionListener(new IniciarSesionBotonListener(empleadoVista));
             empleadoVista.setVisible(true);
             vista.dispose();
         }
     }
+    
+    private class IniciarSesionBotonListener implements ActionListener{
+        private PasAuthEmpleadoVista empleadoVista;
+        
+        public IniciarSesionBotonListener(PasAuthEmpleadoVista empleadoVista){
+            this.empleadoVista = empleadoVista;
+        }
+        
+        public void actionPerformed(ActionEvent e) {
+            String dni = empleadoVista.getDni();
+            String pass = empleadoVista.getPass();
+            
+            Empleado empleadoAuth = pasAuth.authentificarEmpleado(dni, pass);
+            
+            if(empleadoAuth != null) {
+                InterfazEmpleadosVista interfazEmpleadoVista = new InterfazEmpleadosVista();
+                InterfazEmpleadosControlador empleadoControlador = new InterfazEmpleadosControlador(interfazEmpleadoVista, empleadoAuth);
+                interfazEmpleadoVista.setVisible(true);
+                empleadoVista.dispose();
+            }
+            else{
+                System.out.println("DNI o Contraseña incorrectas");
+            }
+            
+        }
+    }
+    
+    
 
     public static void main(String[] args) {
         PasarelaAuthentificacionVista vista = new PasarelaAuthentificacionVista();

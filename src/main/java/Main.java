@@ -1,12 +1,13 @@
 
 import cliente.modelo.Cliente;
+import cliente.modelo.GestorClientes;
 import cliente.modelo.InterfazCliente;
 import common.authentificacion.modelo.PasarelaAuthentificacion;
 import common.producto.modelo.GestorProductos;
 import common.producto.modelo.Producto;
 import empleado.modelo.Empleado;
 import empleado.modelo.GestorEmpleados;
-import empleado.modelo.InterfazEmpleados;
+import empleado.InterfazEmpleados;
 import java.util.List;
 
 /*
@@ -20,22 +21,17 @@ import java.util.List;
  */
 public class Main {
     public static void main(String[] args) {
-        PasarelaAuthentificacion p = new PasarelaAuthentificacion();
-        Object usuarioObjeto = p.autentificar();
 
-        if(usuarioObjeto instanceof Cliente) {
-            Cliente cliente = (Cliente) usuarioObjeto;
-            InterfazCliente interfazCliente = new InterfazCliente();
-            interfazCliente.InterfazCli(cliente);
+        GestorClientes gestor = new GestorClientes();
+        gestor.inicializarClientes();
+        List<Cliente> clientes = gestor.readClientes();
+        for(int i=0; i<clientes.size(); i++){
+            System.out.println("SIN FUNCION");
+            System.out.println(clientes.get(i).toString());
         }
-        else if(usuarioObjeto instanceof Empleado) {
-            Empleado empleado = (Empleado) usuarioObjeto;
-            InterfazEmpleados interfazEmpleados = new InterfazEmpleados();
-            interfazEmpleados.InterfazEmp(empleado);
-        }
-        else {
-            System.out.println("Error");
-        }
+        
+        System.out.println("CON FUNCION");
+        System.out.println(gestor.MostrarClientes());
 
     }
 }

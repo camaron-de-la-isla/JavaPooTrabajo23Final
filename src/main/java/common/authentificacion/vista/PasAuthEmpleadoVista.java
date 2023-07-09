@@ -28,8 +28,8 @@ public class PasAuthEmpleadoVista extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         dni = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        pass = new javax.swing.JTextField();
+        iniciarSesionBoton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -40,13 +40,18 @@ public class PasAuthEmpleadoVista extends javax.swing.JFrame {
         dni.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         dni.setText("DNI");
 
-        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField2.setText("Contraseña");
-
-        jButton1.setText("Iniciar Sesion");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        pass.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pass.setText("Contraseña");
+        pass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                passActionPerformed(evt);
+            }
+        });
+
+        iniciarSesionBoton.setText("Iniciar Sesion");
+        iniciarSesionBoton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                iniciarSesionBotonActionPerformed(evt);
             }
         });
 
@@ -62,13 +67,13 @@ public class PasAuthEmpleadoVista extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(165, 165, 165)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField2)
+                            .addComponent(pass)
                             .addComponent(dni))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 154, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(iniciarSesionBoton)
                 .addGap(146, 146, 146))
         );
         layout.setVerticalGroup(
@@ -79,19 +84,35 @@ public class PasAuthEmpleadoVista extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(dni, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(iniciarSesionBoton)
                 .addContainerGap(57, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void iniciarSesionBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarSesionBotonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_iniciarSesionBotonActionPerformed
 
+    private void passActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passActionPerformed
+    
+    public javax.swing.JButton getIniciarSesionBoton() {
+    return iniciarSesionBoton;
+}
+    
+    public String getDni() {
+        return dni.getText();
+}
+    
+    public String getPass() {
+        return pass.getText();
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -129,8 +150,8 @@ public class PasAuthEmpleadoVista extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField dni;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton iniciarSesionBoton;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField pass;
     // End of variables declaration//GEN-END:variables
 }

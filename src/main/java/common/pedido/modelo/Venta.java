@@ -11,8 +11,10 @@ import common.*;
  * @author sergi
  */
 
+import java.io.Serializable;
 
-public class Venta {
+public class Venta implements Serializable{
+    private static final long serialVersionUID = -1315886448553080707L;
     private
     int id;
     String fecha;

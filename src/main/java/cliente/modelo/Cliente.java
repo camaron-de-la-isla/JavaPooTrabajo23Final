@@ -4,12 +4,15 @@
  */
 package cliente.modelo;
 
+import java.io.Serializable;
+
 /**
  *
  * @author sergi
  */
 
-public class Cliente {
+public class Cliente implements Serializable{
+    private static final long serialVersionUID = -1315886448553080707L;
     private String nombre;
     private String apellidos;
     private String dni;
@@ -101,16 +104,15 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente{" +
-                "nombre='" + nombre + '\'' +
-                ", apellidos='" + apellidos + '\'' +
-                ", dni='" + dni + '\'' +
-                ", direccion='" + direccion + '\'' +
-                ", telefono='" + telefono + '\'' +
-                ", email='" + email + '\'' +
-                ", usuario='" + usuario + '\'' +
-                ", contraseña='" + contraseña + '\'' +
-                '}';
+        return  "Nombre: " + nombre +
+                "\nApellidos: " + apellidos + 
+                "\nDni: " + dni +
+                "\nDireccion: " + direccion +
+                "\nTelefono: " + telefono + 
+                "\nEmail: " + email +
+                "\nUsuario: " + usuario + 
+                "\nContraseña: " + contraseña + 
+                "\n\n";
     }
 
 

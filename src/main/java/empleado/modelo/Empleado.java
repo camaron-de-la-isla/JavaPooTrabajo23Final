@@ -121,9 +121,9 @@ public class Empleado implements Serializable{
 
     @Override
     public String toString() {
-        return "Empleado [nombre=" + nombre + ", apellidos=" + apellidos + ", dni=" + dni + ", direccion=" + direccion +
-                ", telefono=" + telefono + ", email=" + email + ", puesto=" + puesto + ", salario=" + salario + ", contraseña=" + contraseña +
-                ", privilegios=" + privilegios + "]";
+        return "Nombre:" + nombre + "\nApellidos:" + apellidos + "\nDni:" + dni + "\nDireccion:" + direccion +
+                "\nTelefono:" + telefono + "\nEmail:" + email + "\nPuesto:" + puesto + "\nSalario:" + salario + "\nContraseña:" + contraseña +
+                "\nPrivilegios:" + privilegios + "\n\n";
     }
 
     public String isPrivilegios() {

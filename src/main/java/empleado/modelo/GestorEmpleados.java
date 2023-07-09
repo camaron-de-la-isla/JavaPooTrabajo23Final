@@ -109,6 +109,15 @@ public GestorEmpleados(){
         }
         return false;
     }
+    
+    
+public String MostrarEmpleados() {
+    String empleadosStr = "";
+    for (int i = 0; i < empleados.size(); i++) {
+        empleadosStr += empleados.get(i).toString() + "\n";
+    } 
+    return empleadosStr;
+}
 
     public boolean existeEmpleado(String dni){
         Empleado empleadoAuthentificar = buscarEmpleado(dni);
