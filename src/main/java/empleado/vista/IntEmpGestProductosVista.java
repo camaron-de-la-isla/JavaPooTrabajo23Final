@@ -28,12 +28,18 @@ public class IntEmpGestProductosVista extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         nombreEmpleadoLabel = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        addTelevisorBoton = new javax.swing.JButton();
+        eliminarProductoBoton = new javax.swing.JButton();
+        mostrarProductosBoton = new javax.swing.JButton();
+        modificarAltavozBoton = new javax.swing.JButton();
         volverBoton = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        buscarProductoBoton = new javax.swing.JButton();
+        addAltavozBoton = new javax.swing.JButton();
+        addSmartphoneBoton = new javax.swing.JButton();
+        addOrdenadorBoton = new javax.swing.JButton();
+        modificarOrdenadorBoton = new javax.swing.JButton();
+        modificarSmartphoneBoton = new javax.swing.JButton();
+        modificarTelevisorBoton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,18 +50,23 @@ public class IntEmpGestProductosVista extends javax.swing.JFrame {
         nombreEmpleadoLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         nombreEmpleadoLabel.setText("Empleado: NOMBRE ");
 
-        jButton1.setText("Añadir producto");
+        addTelevisorBoton.setText("Añadir Televisor");
 
-        jButton2.setText("Eliminar producto");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        eliminarProductoBoton.setText("Eliminar producto");
+        eliminarProductoBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                eliminarProductoBotonActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Mostrar productos");
+        mostrarProductosBoton.setText("Mostrar productos");
 
-        jButton4.setText("Modificar producto");
+        modificarAltavozBoton.setText("Modificar Altavoz");
+        modificarAltavozBoton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modificarAltavozBotonActionPerformed(evt);
+            }
+        });
 
         volverBoton.setText("Volver");
         volverBoton.addActionListener(new java.awt.event.ActionListener() {
@@ -64,7 +75,34 @@ public class IntEmpGestProductosVista extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setText("Buscar producto");
+        buscarProductoBoton.setText("Buscar producto");
+
+        addAltavozBoton.setText("Añadir Altavoz");
+
+        addSmartphoneBoton.setText("Añadir Smartphone");
+
+        addOrdenadorBoton.setText("Añadir Ordenador");
+
+        modificarOrdenadorBoton.setText("Modificar Ordenador");
+        modificarOrdenadorBoton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modificarOrdenadorBotonActionPerformed(evt);
+            }
+        });
+
+        modificarSmartphoneBoton.setText("Modificar Smartphone");
+        modificarSmartphoneBoton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modificarSmartphoneBotonActionPerformed(evt);
+            }
+        });
+
+        modificarTelevisorBoton.setText("Modificar Televisor");
+        modificarTelevisorBoton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modificarTelevisorBotonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -81,21 +119,41 @@ public class IntEmpGestProductosVista extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(245, 245, 245)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(119, 119, 119)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(245, 245, 245)
+                                .addComponent(eliminarProductoBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(156, 156, 156)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(addOrdenadorBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(addSmartphoneBoton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(addAltavozBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(addTelevisorBoton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(88, 88, 88)
+                                .addComponent(mostrarProductosBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(modificarOrdenadorBoton, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+                                    .addComponent(modificarAltavozBoton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(modificarSmartphoneBoton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(modificarTelevisorBoton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(33, 33, 33)
                         .addComponent(volverBoton))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(388, 388, 388)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(266, Short.MAX_VALUE))
+                        .addComponent(buscarProductoBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(150, 150, 150))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -107,30 +165,107 @@ public class IntEmpGestProductosVista extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addComponent(nombreEmpleadoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(61, 61, 61)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(97, 97, 97)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(42, 42, 42)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(addOrdenadorBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(addSmartphoneBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(modificarAltavozBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(modificarTelevisorBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(modificarSmartphoneBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(modificarOrdenadorBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(4, 4, 4)))
+                        .addGap(70, 70, 70)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(mostrarProductosBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(eliminarProductoBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(42, 42, 42)
+                        .addComponent(buscarProductoBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(addTelevisorBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(addAltavozBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(64, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void eliminarProductoBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarProductoBotonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_eliminarProductoBotonActionPerformed
 
     private void volverBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverBotonActionPerformed
         InterfazEmpleadosVista intEmp = new InterfazEmpleadosVista();
         intEmp.setVisible(true);
                 }//GEN-LAST:event_volverBotonActionPerformed
 
+    private void modificarAltavozBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarAltavozBotonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarAltavozBotonActionPerformed
+
+    private void modificarOrdenadorBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarOrdenadorBotonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarOrdenadorBotonActionPerformed
+
+    private void modificarSmartphoneBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarSmartphoneBotonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarSmartphoneBotonActionPerformed
+
+    private void modificarTelevisorBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarTelevisorBotonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarTelevisorBotonActionPerformed
+    
+    public javax.swing.JButton getAddAltavozBoton(){
+        return addAltavozBoton;
+    }
+    
+    public javax.swing.JButton getAddOrdenadorBoton(){
+        return addOrdenadorBoton;
+    }
+    
+    public javax.swing.JButton getAddSmartphoneBoton(){
+        return addSmartphoneBoton;
+    }
+    
+    public javax.swing.JButton getAddTelevisorBoton(){
+        return addTelevisorBoton;
+    }
+    
+    public javax.swing.JButton getModificarAltavozBoton(){
+        return modificarAltavozBoton;
+    }
+    
+    public javax.swing.JButton getModificarOrdenadorBoton(){
+        return modificarOrdenadorBoton;
+    }
+    
+    public javax.swing.JButton getModificarSmartphoneBoton(){
+        return modificarSmartphoneBoton;
+    }
+    
+    public javax.swing.JButton getModificarTelevisorBoton(){
+        return modificarTelevisorBoton;
+    }
+    
+    public javax.swing.JButton getEliminarProductoBoton() {
+        return eliminarProductoBoton;
+    }
+    
+    public javax.swing.JButton getMostrarProductosBoton(){
+        return mostrarProductosBoton;
+    }
+    
+    public javax.swing.JButton getBuscarProductoBoton(){
+        return buscarProductoBoton;
+    }
+
+    
     public void setNombreEmpleado(String nombre, String apellidos) {
         nombreEmpleadoLabel.setText("Empleado: " + nombre + " " + apellidos);
     }
@@ -174,12 +309,18 @@ public class IntEmpGestProductosVista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton addAltavozBoton;
+    private javax.swing.JButton addOrdenadorBoton;
+    private javax.swing.JButton addSmartphoneBoton;
+    private javax.swing.JButton addTelevisorBoton;
+    private javax.swing.JButton buscarProductoBoton;
+    private javax.swing.JButton eliminarProductoBoton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton modificarAltavozBoton;
+    private javax.swing.JButton modificarOrdenadorBoton;
+    private javax.swing.JButton modificarSmartphoneBoton;
+    private javax.swing.JButton modificarTelevisorBoton;
+    private javax.swing.JButton mostrarProductosBoton;
     private javax.swing.JLabel nombreEmpleadoLabel;
     private javax.swing.JButton volverBoton;
     // End of variables declaration//GEN-END:variables

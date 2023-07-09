@@ -36,15 +36,44 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="245" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jButton2" min="-2" pref="164" max="-2" attributes="0"/>
-                          <Component id="jButton1" min="-2" pref="164" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButton3" min="-2" pref="164" max="-2" attributes="0"/>
-                          <Component id="jButton4" min="-2" pref="164" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="245" max="-2" attributes="0"/>
+                              <Component id="eliminarProductoBoton" min="-2" pref="164" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="156" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="addOrdenadorBoton" min="-2" pref="141" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="addSmartphoneBoton" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="addAltavozBoton" min="-2" pref="140" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="addTelevisorBoton" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
+                              <Component id="mostrarProductosBoton" min="-2" pref="164" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace pref="71" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="modificarOrdenadorBoton" pref="149" max="32767" attributes="0"/>
+                                  <Component id="modificarAltavozBoton" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="modificarSmartphoneBoton" max="32767" attributes="0"/>
+                                  <Component id="modificarTelevisorBoton" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -53,10 +82,10 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="388" max="-2" attributes="0"/>
-                      <Component id="jButton5" min="-2" pref="164" max="-2" attributes="0"/>
+                      <Component id="buscarProductoBoton" min="-2" pref="164" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="266" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -70,17 +99,40 @@
               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
               <Component id="nombreEmpleadoLabel" min="-2" pref="40" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton1" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                  <Component id="jButton4" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="addOrdenadorBoton" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                              <Component id="addSmartphoneBoton" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="modificarAltavozBoton" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                                  <Component id="modificarTelevisorBoton" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="modificarSmartphoneBoton" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                                  <Component id="modificarOrdenadorBoton" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="mostrarProductosBoton" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                          <Component id="eliminarProductoBoton" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                      <Component id="buscarProductoBoton" min="-2" pref="50" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="addTelevisorBoton" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="addAltavozBoton" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton3" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                  <Component id="jButton2" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-              <Component id="jButton5" min="-2" pref="50" max="-2" attributes="0"/>
               <EmptySpace pref="64" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -104,28 +156,31 @@
         <Property name="text" type="java.lang.String" value="Empleado: NOMBRE "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="addTelevisorBoton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="A&#xf1;adir producto"/>
+        <Property name="text" type="java.lang.String" value="A&#xf1;adir Televisor"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="eliminarProductoBoton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Eliminar producto"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="eliminarProductoBotonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton3">
+    <Component class="javax.swing.JButton" name="mostrarProductosBoton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Mostrar productos"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton4">
+    <Component class="javax.swing.JButton" name="modificarAltavozBoton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Modificar producto"/>
+        <Property name="text" type="java.lang.String" value="Modificar Altavoz"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="modificarAltavozBotonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="volverBoton">
       <Properties>
@@ -135,10 +190,49 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="volverBotonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton5">
+    <Component class="javax.swing.JButton" name="buscarProductoBoton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Buscar producto"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="addAltavozBoton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="A&#xf1;adir Altavoz"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="addSmartphoneBoton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="A&#xf1;adir Smartphone"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="addOrdenadorBoton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="A&#xf1;adir Ordenador"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="modificarOrdenadorBoton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Modificar Ordenador"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="modificarOrdenadorBotonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="modificarSmartphoneBoton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Modificar Smartphone"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="modificarSmartphoneBotonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="modificarTelevisorBoton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Modificar Televisor"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="modificarTelevisorBotonActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

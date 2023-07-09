@@ -80,6 +80,7 @@ public class InterfazEmpleadosControlador {
     private class GestProductosButtonListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             IntEmpGestProductosVista gestProductosVista = new IntEmpGestProductosVista();
+            GestProductosControlador gestProductosControlador = new GestProductosControlador(gestProductosVista, empleadoAuth);
             gestProductosVista.setNombreEmpleado(empleadoAuth.getNombre(), empleadoAuth.getApellidos());
             gestProductosVista.setVisible(true);
         }

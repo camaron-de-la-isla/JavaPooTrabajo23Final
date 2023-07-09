@@ -87,7 +87,7 @@ public List<Producto> readProductos() {
 
 
 
-    public Producto buscarProducto(int id){
+    public Producto buscarProductoId(int id){
         for(int i = 0; i < productos.size(); i++){
             if(productos.get(i).getId()==id){
                 return productos.get(i);
@@ -96,7 +96,7 @@ public List<Producto> readProductos() {
         return null;
     }
 
-    public Producto buscarProducto(String nombre){
+    public Producto buscarProductoNombre(String nombre){
         for(int i = 0; i < productos.size(); i++){
             if(productos.get(i).getNombre().equals(nombre)){
                 return productos.get(i);
@@ -115,18 +115,41 @@ public List<Producto> readProductos() {
             }
         }
     }
+    
+    public String MostrarProductos() {
+    String productosStr = "";
+    for (int i = 0; i < productos.size(); i++) {
+        productosStr += productos.get(i).toString() + "\n";
+    } 
+    return productosStr;
+}
 
-    public void deleteProducto(int id){
+    public boolean deleteProducto(int id){
         for(int i = 0; i < productos.size(); i++){
             Producto producto = productos.get(i);
             if(producto.getId()==id){
                 productos.remove(i);
                 FileUtil.save(filePath, productos);
                 System.out.println("Producto eliminado correctamente");
-                return;
+                return true;
             }
         }
-        System.out.println("No se encontró ningún producto con el ID especificado");
+        System.out.println("No se encontró ningún producto con el ID especificado");        
+        return false;
+    }
+    
+    public boolean deleteProducto(String nombre){
+        for(int i = 0; i < productos.size(); i++){
+            Producto producto = productos.get(i);
+            if(producto.getNombre()==nombre){
+                productos.remove(i);
+                FileUtil.save(filePath, productos);
+                System.out.println("Producto eliminado correctamente");
+                return true;
+            }
+        }
+        System.out.println("No se encontró ningún producto con el ID especificado");        
+        return false;
     }
 
     public int getIdProducto(String nombre){
@@ -137,5 +160,7 @@ public List<Producto> readProductos() {
         }
         return 0;
     } 
+    
+    
     
 }
